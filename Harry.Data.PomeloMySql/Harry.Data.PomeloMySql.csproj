@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFrameworks>netstandard2.1;net5.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <Import Project="../common.props" />
+
+  <ItemGroup>
+    <PackageReference Include="Harry.SqlBuilder.MySql" Version="0.1.0-alpha2-1407" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.0-alpha.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Harry.Data.Abstractions\Harry.Data.Abstractions.csproj" />
+    <ProjectReference Include="..\Harry.Data\Harry.Data.csproj" />
+  </ItemGroup>
+</Project>

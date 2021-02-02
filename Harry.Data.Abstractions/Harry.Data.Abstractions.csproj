@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.1;net5.0</TargetFrameworks>
+		<RootNamespace>Harry.Data</RootNamespace>
+	</PropertyGroup>
+
+	<Import Project="../common.props" />
+
+	<!--<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <DefineConstants>$(DefineConstants);NETCORE</DefineConstants>
+  </PropertyGroup>-->
+
+	<ItemGroup>
+		<PackageReference Include="Harry.EventBus.Abstractions" Version="0.1.0-alpha1-1407" />
+		<PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Primitives" Version="5.0.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+	</ItemGroup>
+
+</Project>

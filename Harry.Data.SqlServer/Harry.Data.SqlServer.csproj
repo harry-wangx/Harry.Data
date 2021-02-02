@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFrameworks>netstandard2.1;net5.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <Import Project="../common.props" />
+
+  <ItemGroup>
+    <PackageReference Include="Harry.SqlBuilder.SqlServer" Version="0.1.0-alpha2-1407" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.2" />
+  </ItemGroup>
+
+  <!--<ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />
+  </ItemGroup>-->
+
+  <ItemGroup>
+    <ProjectReference Include="..\Harry.Data.Abstractions\Harry.Data.Abstractions.csproj" />
+    <ProjectReference Include="..\Harry.Data\Harry.Data.csproj" />
+  </ItemGroup>
+
+</Project>

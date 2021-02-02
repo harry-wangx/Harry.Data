@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFrameworks>netstandard2.1;net5.0</TargetFrameworks>
+    <!--<DefineConstants>$(DefineConstants);EFCORE</DefineConstants>-->
+    <RootNamespace>Harry.Data</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="../common.props" />
+
+  <ItemGroup>
+    <PackageReference Include="Harry.Common" Version="0.1.0-alpha1-1406" />
+    <PackageReference Include="Harry.SqlBuilder.Dapper" Version="0.1.0-alpha2-1407" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.2" />
+     <PackageReference Include="Microsoft.Extensions.Options" Version="5.0.0" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\Harry.Data.Abstractions\Harry.Data.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

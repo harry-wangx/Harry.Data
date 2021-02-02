@@ -1,0 +1,9 @@
+﻿<Project>
+  <PropertyGroup>
+    <!--<Version>1.0.0-alpha9014</Version>-->
+    <Authors>Harry</Authors>
+    <!--<AssemblyVersion>0.0.1.14</AssemblyVersion>
+    <FileVersion>0.0.1.14</FileVersion>-->
+	<OrchardCoreVersion>1.0.0-rc2-13450</OrchardCoreVersion>
+  </PropertyGroup>
+</Project>

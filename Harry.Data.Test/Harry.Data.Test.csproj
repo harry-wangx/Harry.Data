@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);INMEMORY</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="InMemoryTestHelper.cs" />
+    <Compile Remove="RepositoryTest.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!--<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.0.1" />-->
+    <!--<PackageReference Include="xunit" Version="2.4.0" />-->
+    <!--<PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />-->
+    <!--<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.1.11" />-->
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Harry.Data.Samples.Models\Harry.Data.Samples.Models.csproj" />
+    <ProjectReference Include="..\Harry.Data\Harry.Data.csproj" />
+  </ItemGroup>
+
+</Project>

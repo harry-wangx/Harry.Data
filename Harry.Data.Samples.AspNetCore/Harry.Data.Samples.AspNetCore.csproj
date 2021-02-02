@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Harry.Data.Abstractions\Harry.Data.Abstractions.csproj" />
+    <ProjectReference Include="..\Harry.Data.Samples.Models\Harry.Data.Samples.Models.csproj" />
+    <ProjectReference Include="..\Harry.Data.Sqlite\Harry.Data.Sqlite.csproj" />
+    <ProjectReference Include="..\Harry.Data.Web\Harry.Data.Web.csproj" />
+    <ProjectReference Include="..\Harry.Data\Harry.Data.csproj" />
+  </ItemGroup>
+
+</Project>
