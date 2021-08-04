@@ -4,7 +4,7 @@
 #>
 $path = Get-Location
 
-$baseDate=[datetime]"03/28/2017"
+$baseDate=[datetime]"03/28/2018"
 $currentDate=$(Get-Date)
 $interval=New-TimeSpan -Start $baseDate -End $currentDate
 $days=$interval.Days
@@ -27,7 +27,7 @@ foreach($line in Get-Content .\projects.txt) {
     }
 
     <# 打包 #>
-    dotnet pack --configuration Release --output "..\$line\bin\nupkgs" $projectName /p:Version="1.0.0-beta4-$days"
+    dotnet pack --configuration Release --output "..\$line\bin\nupkgs" $projectName /p:Version="1.0.0-beta5-$days"
 
     <# 推送至nuget服务器 #>
     dotnet nuget push "..\$line\bin\nupkgs\*.nupkg"  -s https://api.nuget.org/v3/index.json --skip-duplicate 

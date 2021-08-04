@@ -7,12 +7,13 @@
 
 	<Import Project="../common.props" />
 
-	<!--<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-    <DefineConstants>$(DefineConstants);NETCORE</DefineConstants>
-  </PropertyGroup>-->
+	<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
+		<PackageReference Include="System.ComponentModel.Annotations" Version="4.3.0" />
+		<PackageReference Include="Microsoft.Extensions.Primitives" Version="3.1.1" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.1" />
+	</ItemGroup>
 
-	<ItemGroup>
-		<PackageReference Include="Harry.EventBus.Abstractions" Version="0.1.0-alpha1-1407" />
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net5.0' ">
 		<PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Primitives" Version="5.0.0" />
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />

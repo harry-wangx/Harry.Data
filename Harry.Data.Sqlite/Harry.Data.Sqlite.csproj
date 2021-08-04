@@ -12,16 +12,16 @@
 
   <ItemGroup>
     <PackageReference Include="Harry.SqlBuilder.Sqlite" Version="0.1.0-alpha2-1407" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.2" />
+   
   </ItemGroup>
 
-  <!--<ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.1" />
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.8" />
   </ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.6" />
-  </ItemGroup>-->
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net5.0' ">
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.2" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Harry.Data.Abstractions\Harry.Data.Abstractions.csproj" />

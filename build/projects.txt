@@ -5,4 +5,3 @@ Harry.Data.PostgreSQL
 Harry.Data.Sqlite
 Harry.Data.SqlServer
 Harry.Data.Web
-Harry.Data.OrchardCore

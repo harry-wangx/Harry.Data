@@ -11,13 +11,13 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.2" />
   </ItemGroup>
 
-  <!--<ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.1" />
-  </ItemGroup>
+	<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.8" />
+	</ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />
-  </ItemGroup>-->
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net5.0' ">
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.0" />
+	</ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Harry.Data.Abstractions\Harry.Data.Abstractions.csproj" />

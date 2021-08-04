@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Harry.SqlBuilder.MySql" Version="0.1.0-alpha2-1407" />
-    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.0-alpha.2" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.1" />
   </ItemGroup>
 
   <ItemGroup>

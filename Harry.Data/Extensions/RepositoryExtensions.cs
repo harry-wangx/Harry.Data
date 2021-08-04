@@ -3,7 +3,6 @@ using System;
 using System.Linq;
 using System.Linq.Expressions;
 using Microsoft.Extensions.DependencyInjection;
-using Harry.Data.Events;
 using Microsoft.Extensions.Options;
 using System.Data.Common;
 using Microsoft.EntityFrameworkCore;
@@ -14,7 +13,6 @@ using Dapper;
 using Harry.Data.Entities;
 using System.Data;
 using System.Text;
-using Harry.EventBus;
 using System.Threading;
 
 namespace Harry.Data
@@ -373,48 +371,5 @@ namespace Harry.Data
             return repository.GetDbConnection().ExecuteAsync(cmd);
 
         }
-
-        #region 事件相关
-        /// <summary>
-        /// 发布数据变更事件
-        /// </summary>
-        /// <returns></returns>
-        public static IRepository Publish(this IRepository repository, DataChangeEvent @event, string eventName = null, string eventBusName = null)
-        {
-            var bus = repository.ServiceProvider.GetRequiredService<IEventBusFactory>().CreateEventBus(eventBusName);
-            bus.Publish(@event, eventName);
-            return repository;
-        }
-
-        /// <summary>
-        /// 发布数据变更事件
-        /// </summary>
-        /// <returns></returns>
-        public static IRepository Publish<T>(this IRepository repository, string id, EventType eventType)
-            where T : class
-        {
-            return repository.Publish(new DataChangeEvent()
-            {
-                DataType = typeof(T).GetFullName(),
-                DataId = id,
-                EventType = eventType
-            });
-        }
-
-        /// <summary>
-        /// 发布数据变更事件
-        /// </summary>
-        /// <returns></returns>
-        public static IRepository Publish(this IRepository repository, string dataType, string id, EventType eventType)
-        {
-            return repository.Publish(new DataChangeEvent()
-            {
-                DataType = dataType,
-                DataId = id,
-                EventType = eventType
-            });
-        }
-
-        #endregion
     }
 }
